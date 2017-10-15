@@ -37,19 +37,23 @@
 <br>
 <table>
   <tr>
-    <th colspan="2">Settings</th>
+    <th colspan="2">Settings | Limits</th>
   </tr>
   <tr>
-    <td><b>Writable Path</b></td>
-    <td>/tmp/</td>
+    <td><b>Writable Path & Space</b></td>
+    <td>/tmp/ 512 MB</td>
   </tr>
   <tr>
-    <td><b>Default</b></td>
-    <td>128 MB Memory 3 Second Timeout</td>
+    <td><b>Default Memory & Execution Time</b></td>
+    <td>128 MB Memory<br>3 Second Timeout</td>
   </tr>
   <tr>
-    <td><b>Modified (Max Limit)</b></td>
-    <td>1536 MB Memory 5 Minutes Timeout</td>
+    <td><b>Max Memory & Execution Time</b></td>
+    <td>1536 MB Memory<br>5 Minutes Timeout</td>
+  </tr>
+  <tr>
+    <td><b>Number of processes and threads (Total)</b></td>
+    <td>1024</td>
   </tr>
 </table>
 <br>
@@ -123,6 +127,14 @@
   <tr>
     <td>Invoke same Lamba with different version</td>
     <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Invoke Request Max Payload Size (RequestResponse/synrchronous invocation)</td>
+    <td>6 MB</td>
+  </tr>
+  <tr>
+    <td>Invoke Request Max Payload Size (Event/asynchronous invocation)</td>
+    <td>128 KB</td>
   </tr>
 </table>
 <br>
