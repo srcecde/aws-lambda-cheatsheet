@@ -213,6 +213,54 @@
   </tr>
 </table>
 <br>
+<table>
+  <tr>
+    <th colspan="3">Troubleshooting</th>
+  </tr>
+  <tr>
+    <th>Error</th>
+    <th>Possible Reason</th>
+    <th>Solution</th>
+  </tr>
+  <tr>
+    <td>
+    File "/var/task/lambda_function.py", line 2, in lambda_handler<br>return event['demoevent']<br>
+    KeyError: 'demoevent'
+    </td>
+    <td>
+      Event does not have the key 'demoevent' or either misspelled
+    </td>
+    <td>
+      Make sure the event is getting the desired key if it is receiving the event from any trigger.<br> Or if the not outside event is passed than check for misspell.<br>Or check the event list by printing event.
+    </td>
+  </tr>
+  <tr>
+    <td>botocore.exceptions.ClientError: An error occurred (AccessDeniedException) when calling the GetParameters operation: User: arn:aws:dummy::1234:assumed-role/role/ is not authorized to perform: ssm:GetParameters on resource: arn:aws:ssm:dummy</td>
+    <td>Lacks Permission to access</td>
+    <td>Assign appropriate permission for accessibility</td>
+  </tr>
+  <tr>
+    <td>ImportError: Missing required dependencies [‘module']</td>
+    <td>Dependent module is missing</td>
+    <td>Install/Upload the required module</td>
+  </tr>
+  <tr>
+    <td>sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "host.dummy.region.rds.amazonaws.com" to address: Name or service not known</td>
+    <td>RDS Host is unavailable</td>
+    <td>Make sure the RDS instance is up and running.<br>Double check the RDS hostname</td>
+  </tr>
+  <tr>
+    <td>[Errno 32] Broken pipe</td>
+    <td>Connection is lost (Either from your side or may be some problem from AWS)<br>While invoking another Lambda, if the payload size exceed the mentioned limit</td>
+    <td>Make sure if you are passing the payload of right size.<br>Check for the connection.</td>
+  </tr>
+  <tr>
+    <td>Unable to import module ‘lambda_function/index’ No module named ‘lambda_function'</td>
+    <td>Handler configuration is not matching the main file name</td>
+    <td>Update the handler configuration as per your filename.function_name</td>
+  </tr>
+</table>
+<br>
 <h3>AWS Lambda CLI commands</h3>
 <br>
 <b>Add Permission</b>
@@ -580,7 +628,7 @@
 
     update-event-source-mapping --uuid 12345kxodurf3443
 <br>
-<b></b>Update Function Code
+<b>Update Function Code</b>
 <p>It updates the code of the desired Lambda function</p>
 <p>Syntax</p>
 
