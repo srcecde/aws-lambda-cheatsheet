@@ -10,7 +10,7 @@
     <th>Type</th><th>Versions</th>
   </tr>
   <tr>
-    <td>Node.js</td><td>v6.4.2 and v6.10.3</td>
+    <td>Node.js</td><td>v4.3 and v6.10.3</td>
   </tr>
   <tr>
     <td>Java</td><td>Java 8</td>
