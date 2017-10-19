@@ -259,6 +259,17 @@
     <td>Handler configuration is not matching the main file name</td>
     <td>Update the handler configuration as per your filename.function_name</td>
   </tr>
+  <tr>
+    <td>Task timed out after 3.00/300 seconds</td>
+    <td>Lamda execution is exceeding the desired time limit</td>
+    <td>If task timeout is less than 300 seconds than it is required to increase the Timeout in configuration.<br>If it is 300 seconds than one can tweak around to <a href="http://www.thetechnologyupdates.com/aws-lambda-going-beyond-5-minutes-execution/">go beyound 5 minutes</a>.</td>
+  </tr>
+  <tr>
+    <td>OperationalError: (psycopg2.OperationalError) terminating connection due to administrator command
+SSL connection has been closed unexpectedly</td>
+    <td>RDS/Database System has been rebooted.<br>In a typical web application using an ORM (SQLAlchemy) Session, the above condition would correspond to a single request failing with a 500 error, then the web application continuing normally beyond that. Hence the approach is “optimistic” in that frequent database restarts are not anticipated.</td>
+    <td>Give second try</td>
+  </tr>
 </table>
 <br>
 <h3>AWS Lambda CLI commands</h3>
@@ -674,6 +685,7 @@
   <li><a href="https://aws.amazon.com/documentation/lambda/">AWS Lambda Docs</a></li>
   <li><a href="https://boto3.readthedocs.io/en/latest/">Boto 3 Docs</a></li>
   <li><a href="http://docs.aws.amazon.com/cli/latest/reference/lambda/">AWS CLI Docs</a></li>
+  <li><a href="http://docs.sqlalchemy.org">SQLAlchemy Docs</a></li>
 </ul>
 <br>
 <b>For queries or issues, feel free to contact or open an <a href="https://github.com/srcecde/aws-lambda-cheatsheet/issues">issue</a></b>
