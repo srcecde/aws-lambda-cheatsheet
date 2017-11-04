@@ -55,6 +55,10 @@
     <td><b>Number of processes and threads (Total)</b></td>
     <td>1024</td>
   </tr>
+  <tr>
+    <td><b>VPC</b></td>
+    <td>When you enable VPC, your Lambda function will lose default internet access. If you require external internet access for your function, ensure that your security group allows outbound connections and that your VPC has a NAT gateway</td>
+  </tr>
 </table>
 <br>
 <table>
