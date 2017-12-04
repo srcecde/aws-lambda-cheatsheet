@@ -49,7 +49,7 @@
   </tr>
   <tr>
     <td><b>Max Memory & Execution Time</b></td>
-    <td>1536 MB Memory<br>5 Minutes Timeout</td>
+    <td>3008 MB Memory<br>5 Minutes Timeout</td>
   </tr>
   <tr>
     <td><b>Number of processes and threads (Total)</b></td>
