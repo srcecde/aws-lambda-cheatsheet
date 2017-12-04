@@ -59,6 +59,10 @@
     <td><b>VPC</b></td>
     <td>When you enable VPC, your Lambda function will lose default internet access. If you require external internet access for your function, ensure that your security group allows outbound connections and that your VPC has a NAT gateway</td>
   </tr>
+  <tr>
+    <td><b>Concurrency</b></td>
+    <td>Concurrent Execution refers to the execution of number of function at a given time. <br>By default the limit is 1000  across all function within a given region. AWS Lambda keeps 100 for the unreserved function. <br>So, if there are 1000 then you can select from 900 and reserve concurrency for selected function and rest 100 is used for the unreserved function.</td>
+  </tr>
 </table>
 <br>
 <table>
