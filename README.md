@@ -10,7 +10,7 @@
     <th>Type</th><th>Versions</th>
   </tr>
   <tr>
-    <td>Node.js</td><td>v4.3 and v6.10.3</td>
+    <td>Node.js</td><td>v4.3.2 and v6.10.3</td>
   </tr>
   <tr>
     <td>Java</td><td>Java 8</td>
@@ -28,10 +28,10 @@
     <th>Available library for Python Execution Envionment</th>
   </tr>
   <tr>
-    <td>AWS SDK for Python 2.7 (Boto 3) version 3-1.4.7 botocore-1.7.2</td>
+    <td>AWS SDK for Python 2.7 (Boto 3) version 3-1.4.7 botocore-1.7.37</td>
   </tr>
   <tr>
-    <td>AWS SDK for Python 3.6 (Boto 3) version 3-1.4.7 botocore-1.7.2</td>
+    <td>AWS SDK for Python 3.6 (Boto 3) version 3-1.4.7 botocore-1.7.37</td>
   </tr>
 </table>
 <br>
