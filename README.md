@@ -63,6 +63,10 @@
     <td><b>Concurrency</b></td>
     <td>Concurrent Execution refers to the execution of number of function at a given time. <br>By default the limit is 1000  across all function within a given region. AWS Lambda keeps 100 for the unreserved function. <br>So, if there are 1000 then you can select from 900 and reserve concurrency for selected function and rest 100 is used for the unreserved function.</td>
   </tr>
+  <tr>
+    <td><b>DLQ (Dead Letter Queue)</td>
+    <td>Failed Lambda is invoked twice by default and the event is discarded. DLQ instruct lamnda to send unprocessed events to AWS SQS or AWS SNS. DLQ helps you troubleshoot and examine the unprocessed request.</td>
+  </tr>
 </table>
 <br>
 <table>
