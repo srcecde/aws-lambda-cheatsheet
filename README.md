@@ -19,7 +19,10 @@
     <td>Python</td><td>v2.7 and v3.6</td>
   </tr>
   <tr>
-    <td>.NET Core</td><td>.NET Core 1.0.1 (C#)</td>
+    <td>.NET Core</td><td>.NET Core 1.0.1 and .NET Core 2.0 (C#)</td>
+  </tr>
+  <tr>
+    <td>Go</td><td>Go 1.x</td>
   </tr>
 </table>
 <br>
