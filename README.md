@@ -10,7 +10,7 @@
     <th>Type</th><th>Versions</th>
   </tr>
   <tr>
-    <td>Node.js</td><td>v4.3.2 and v6.10.3</td>
+    <td>Node.js</td><td>v8.10, v4.3.2 and v6.10.3</td>
   </tr>
   <tr>
     <td>Java</td><td>Java 8</td>
@@ -69,6 +69,10 @@
   <tr>
     <td><b>DLQ (Dead Letter Queue)</td>
     <td>Failed Lambda is invoked twice by default and the event is discarded. DLQ instruct lamnda to send unprocessed events to AWS SQS or AWS SNS. DLQ helps you troubleshoot and examine the unprocessed request.</td>
+  </tr>
+  <tr>
+    <td><b>Throttle</b></td>
+    <td>Throttle will set reserved concurrency of the function to zero and it will throttle all future invocation. If the function is throttled then it will fail to run. (If the fucntion is ran from Lambda console then it will throw "Calling the Invoke API failed with message: Rate Exceeded.")</td>
   </tr>
 </table>
 <br>
@@ -284,6 +288,11 @@
 SSL connection has been closed unexpectedly</td>
     <td>RDS/Database System has been rebooted.<br>In a typical web application using an ORM (SQLAlchemy) Session, the above condition would correspond to a single request failing with a 500 error, then the web application continuing normally beyond that. Hence the approach is “optimistic” in that frequent database restarts are not anticipated.</td>
     <td>Give second try</td>
+  </tr>
+  <tr>
+    <td>Error code 429</td>
+    <td>The function is throttled. Basically the reserved concurrency is set to zero or it have reach the account level throttle. <br>(The function that is invoked synchronous and if it is throttled then it will return 429 error. If the lambda function is invoked asynchronously and if it is throttled then it will retry the throttled event for upto 6 hours.) </td>
+    <td>Check for the reserved concurrency limit or throttle status for the individual function. Or check for the account level concurrent execution limit</td>
   </tr>
 </table>
 <br>
