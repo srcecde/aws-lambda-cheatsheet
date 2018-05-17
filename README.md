@@ -191,6 +191,11 @@
     <td>Application ID (Skill)</td>
   </tr>
   <tr>
+    <td><b>CloudFront</b></td>
+    <td>Trigger AWS Lambda based on difference CloudFront event.</td>
+    <td>CloudFront distribution, Cache behaviour, CloudFront event (Origin request/response, Viewer request/response).<br>To set CloudFront trigger, one need to publish the version of Lambda.<br><b>Limitations:</b><br>Runtime is limited to Node.js 6.10<br>/tmp/ space is not available<br>Environment variables, DLQ & Amazon VPC's cannot be used</td>
+  </tr>
+  <tr>
     <td><b>CloudWatch Events</b></td>
     <td>Trigger AWS Lambda on desired time interval (rate(1 day)) or on the state change of EC2, RDS, S3, Health.</td>
     <td>Rule based on either Event Pattern (time interval)<br>Schedule Expression (Auto Scaling on events like Instance launch and terminate<br>AWS API call via CloudTrail</td>
