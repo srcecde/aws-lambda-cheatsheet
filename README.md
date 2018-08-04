@@ -31,10 +31,10 @@
     <th>Available library for Python Execution Envionment</th>
   </tr>
   <tr>
-    <td>AWS SDK for Python 2.7 (Boto 3) version 3-1.4.7 botocore-1.7.37</td>
+    <td>AWS SDK for Python 2.7 (Boto 3) version 3-1.7.30 botocore-1.10.30</td>
   </tr>
   <tr>
-    <td>AWS SDK for Python 3.6 (Boto 3) version 3-1.4.7 botocore-1.7.37</td>
+    <td>AWS SDK for Python 3.6 (Boto 3) version 3-1.7.30 botocore-1.10.30</td>
   </tr>
   <tr>
     <td>AWS SDK for JavaScript version 2.249.1</td>
