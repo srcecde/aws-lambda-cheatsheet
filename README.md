@@ -19,7 +19,7 @@
     <td>Python</td><td>v2.7 and v3.6</td>
   </tr>
   <tr>
-    <td>.NET Core</td><td>.NET Core 1.0.1, .NET Core 2.0 and .NET Core 2.1 (C#)</td>
+    <td>.NET Core</td><td>.NET Core 1.0 (C#), .NET Core 2.0 (C#) and .NET Core 2.1 (C#/PowerShell Core 6.0)</td>
   </tr>
   <tr>
     <td>Go</td><td>Go 1.x</td>
@@ -31,16 +31,22 @@
     <th>Available library for Python Execution Envionment</th>
   </tr>
   <tr>
-    <td>AWS SDK for Python 2.7 (Boto 3) version 3-1.7.30 botocore-1.10.30</td>
+    <td>OS - Amazon Linux</td>
   </tr>
   <tr>
-    <td>AWS SDK for Python 3.6 (Boto 3) version 3-1.7.30 botocore-1.10.30</td>
+    <td>AMI - amzn-ami-hvm-2017.03.1.20170812-x86_64-gp2</td>
   </tr>
   <tr>
-    <td>AWS SDK for JavaScript version 2.249.1</td>
+    <td>Linux Kernel - 4.14.62-84.118.amzn2.x86_64</td>
   </tr>
   <tr>
-    <td>Amazon Linux build of java-1.8.0-openjdk for Java</td>
+    <td>AWS SDK for Python 2.7 (Boto 3) version 3-1.7.74 botocore-1.10.74</td>
+  </tr>
+  <tr>
+    <td>AWS SDK for Python 3.6 (Boto 3) version 3-1.7.74 botocore-1.10.74</td>
+  </tr>
+  <tr>
+    <td>AWS SDK for JavaScript version 2.290.0</td>
   </tr>
 </table>
 <br>
@@ -58,11 +64,27 @@
   </tr>
   <tr>
     <td><b>Max Memory & Execution Time</b></td>
-    <td>3008 MB Memory<br>5 Minutes Timeout</td>
+    <td>3008 MB Memory<br>15 Minutes Timeout</td>
   </tr>
   <tr>
     <td><b>Number of processes and threads (Total)</b></td>
     <td>1024</td>
+  </tr>
+  <tr>
+    <td><b>Maximum deployment package size</b></td>
+    <td>50 MB</td>
+  </tr>
+  <tr>
+    <td><b>Maximum deployment package size for console editor</b></td>
+    <td>3 MB</td>
+  </tr>
+  <tr>
+    <td><b>Total size of deployment package per region</b></td>
+    <td>75 GB</td>
+  </tr>
+  <tr>
+    <td><b>Maximum size of environment variables set</b></td>
+    <td>4 KB</td>
   </tr>
   <tr>
     <td><b>VPC</b></td>
@@ -288,11 +310,6 @@
     <td>Unable to import module ‘lambda_function/index’ No module named ‘lambda_function'</td>
     <td>Handler configuration is not matching the main file name</td>
     <td>Update the handler configuration as per your filename.function_name</td>
-  </tr>
-  <tr>
-    <td>Task timed out after 3.00/300 seconds</td>
-    <td>Lamda execution is exceeding the desired time limit</td>
-    <td>If task timeout is less than 300 seconds than it is required to increase the Timeout in configuration.<br>If it is 300 seconds than one can tweak around to <a href="http://www.thetechnologyupdates.com/aws-lambda-going-beyond-5-minutes-execution/">go beyound 5 minutes</a>.</td>
   </tr>
   <tr>
     <td>OperationalError: (psycopg2.OperationalError) terminating connection due to administrator command
