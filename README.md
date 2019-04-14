@@ -16,7 +16,10 @@
     <td>Java</td><td>Java 8</td>
   </tr>
   <tr>
-    <td>Python</td><td>v2.7 and v3.6</td>
+    <td>Python</td><td>v2.7, v3.6, v3.7</td>
+  </tr>
+  <tr>
+    <td>Ruby</td><td>Ruby 2.5</td>
   </tr>
   <tr>
     <td>.NET Core</td><td>.NET Core 1.0 (C#), .NET Core 2.0 (C#) and .NET Core 2.1 (C#/PowerShell Core 6.0)</td>
@@ -44,6 +47,9 @@
   </tr>
   <tr>
     <td>AWS SDK for Python 3.6 (Boto 3) version 3-1.7.74 botocore-1.10.74</td>
+  </tr>
+  <tr>
+    <td>AWS SDK for Python 3.7 – boto3-1.9.42 botocore-1.12.42</td>
   </tr>
   <tr>
     <td>AWS SDK for JavaScript version 2.290.0</td>
@@ -87,6 +93,10 @@
     <td>4 KB</td>
   </tr>
   <tr>
+    <td><b>Maximum function Layers</b></td>
+    <td>5 layers</td>
+  </tr>
+  <tr>
     <td><b>VPC</b></td>
     <td>When you enable VPC, your Lambda function will lose default internet access. If you require external internet access for your function, ensure that your security group allows outbound connections and that your VPC has a NAT gateway</td>
   </tr>
@@ -123,6 +133,10 @@
   <tr>
     <td><b>AWSLambdaVPCAccessExecutionRole</b></td>
     <td>Grants permissions for Amazon Elastic Compute Cloud (Amazon EC2) actions to manage elastic network interfaces (ENIs).</td>
+  </tr>
+  <tr>
+    <td><b>AWSXrayWriteOnlyAccess</b></td>
+    <td>Grants permission for X-ray to to upload trace data to debug and analyze.</td>
   </tr>
 </table>
 <br>
@@ -219,6 +233,11 @@
     <td>Application ID (Skill)</td>
   </tr>
   <tr>
+    <td><b>Application Load Balancer</b></td>
+    <td>Trigger AWS Lambda from ALB</td>
+    <td>Application Load Balancer<br>Listener (It is the port that ALP receivce traffice)<br>Host<br>Path</td>
+  </tr>
+  <tr>
     <td><b>CloudFront</b></td>
     <td>Trigger AWS Lambda based on difference CloudFront event.</td>
     <td>CloudFront distribution, Cache behaviour, CloudFront event (Origin request/response, Viewer request/response).<br>To set CloudFront trigger, one need to publish the version of Lambda.<br><b>Limitations:</b><br>Runtime is limited to Node.js 6.10<br>/tmp/ space is not available<br>Environment variables, DLQ & Amazon VPC's cannot be used</td>
@@ -262,6 +281,11 @@
     <td><b>SNS</b></td>
     <td>Trigger AWS Lambda whenever the message is published to Amazon SNS Topic</td>
     <td>SNS Topic</td>
+  </tr>
+  <tr>
+    <td><b>SQS</b></td>
+    <td>Trigger AWS Lambda on message arrival in SQS</td>
+    <td>SQS queue<br>Batch size<br><b>Limitation:</b> It only works with Standard queue and not FIFO queue</td>
   </tr>
 </table>
 <br>
