@@ -6,83 +6,352 @@
 
 <h3>This cheatsheet is probably based on Python</h3>
 <br>
-<table border=1>
+<table border="1">
   <tr>
-    <th colspan="2">Runtime Versions</th>
+    <th colspan="4">Runtime Versions</th>
   </tr>
   <tr>
-    <th>Type</th><th>Versions</th>
+    <th>Type</th>
+    <th>Versions</th>
+    <th>AWS SDK</th>
+    <th>Operating System</th>
+  </tr>
+<!-- NodeJS -->
+  <tr>
+    <td rowspan="2">Node.js</td>
+    <td>nodejs10.x</td>
+    <td>(JavaScript) 2.712.0</td>
+    <td>Amazon Linux 2</td>
   </tr>
   <tr>
-    <td>Node.js</td><td>v8.10, v6.10 and v4.3 (Deprecated)</td>
+    <td>nodejs12.x</td>
+    <td>(JavaScript) 2.712.0</td>
+    <td>Amazon Linux 2</td>
+  </tr>
+
+<!-- Java -->
+  <tr>
+    <td rowspan="3">Java</td>
+    <td>java11</td>
+    <td>(JDK) amazon-corretto-11</td>
+    <td>Amazon Linux 2</td>
   </tr>
   <tr>
-    <td>Java</td><td>Java 8</td>
+    <td>java8.a12</td>
+    <td>(JDK) amazon-corretto-8</td>
+    <td>Amazon Linux 2</td>
   </tr>
   <tr>
-    <td>Python</td><td>v2.7 and v3.6</td>
+    <td>java8</td>
+    <td>(JDK) java-1.8.0-openjdk</td>
+    <td>Amazon Linux</td>
+  </tr>
+
+<!-- Python -->
+  <tr>
+    <td rowspan="4">Python</td>
+    <td>python3.8</td>
+    <td>(Python) boto3-1.14.40 botocore-1.17.40</td>
+    <td>Amazon Linux 2</td>
   </tr>
   <tr>
-    <td>.NET Core</td><td>.NET Core 1.0.1, .NET Core 2.0 and .NET Core 2.1 (C#)</td>
+    <td>python3.7</td>
+    <td>(Python) boto3-1.14.40 botocore-1.17.40</td>
+    <td>Amazon Linux</td>
   </tr>
   <tr>
-    <td>Go</td><td>Go 1.x</td>
+    <td>python3.6</td>
+    <td>(Python) boto3-1.14.40 botocore-1.17.40</td>
+    <td>Amazon Linux</td>
+  </tr>
+  <tr>
+    <td>python2.7</td>
+    <td>(Python) boto3-1.14.40 botocore-1.17.40</td>
+    <td>Amazon Linux</td>
+  </tr>
+
+<!-- Ruby -->
+  <tr>
+    <td rowspan="2">Ruby</td>
+    <td>ruby2.7</td><td>(Ruby) 3.0.3</td>
+    <td>Amazon Linux 2</td>
+  </tr>
+  <tr>
+    <td>ruby2.5</td>
+    <td>(Ruby) 3.0.3</td>
+    <td>Amazon Linux</td>
+  </tr>
+
+<!-- .NET -->
+  <tr>
+    <td rowspan="2">.NET Core</td>
+    <td>dotnetcore3.1</td>
+    <td>--</td>
+    <td>Amazon Linux 2</td>
+  </tr>
+  <tr>
+    <td>dotnetcore2.1</td>
+    <td>--</td>
+    <td>Amazon Linux</td>
+  </tr>
+
+<!-- Go -->
+  <tr>
+    <td>Go</td>
+    <td>go1.x</td>
+    <td>--</td>
+    <td>Amazon Linux</td>
+  </tr>
+
+<!-- Custom runtime -->
+  <tr>
+    <td rowspan="2">Custom Runtime</td>
+    <td>provided.al2</td>
+    <td>--</td>
+    <td>Amazon Linux 2</td>
+  </tr>
+  <tr>
+    <td>provided</td>
+    <td>--</td>
+    <td>Amazon Linux</td>
   </tr>
 </table>
+
 <br>
-<table border=1>
+
+<table border="1">
   <tr>
-    <th>Available library for Python Execution Envionment</th>
+    <th colspan="4">Available Operating System</th>
   </tr>
   <tr>
-    <td>AWS SDK for Python 2.7 (Boto 3) version 3-1.7.30 botocore-1.10.30</td>
+    <th>Type</th>
+    <th>Image</th>
+    <th>Kernel</th>
   </tr>
   <tr>
-    <td>AWS SDK for Python 3.6 (Boto 3) version 3-1.7.30 botocore-1.10.30</td>
+    <td>Amazon Linux</td>
+    <td>amzn-ami-hvm-2018.03.0.20181129-x86_64-gp2</td>
+    <td>4.14.171-105.231.amzn1.x86_64</td>
   </tr>
   <tr>
-    <td>AWS SDK for JavaScript version 2.249.1</td>
-  </tr>
-  <tr>
-    <td>Amazon Linux build of java-1.8.0-openjdk for Java</td>
+    <td>Amazon Linux 2</td>
+    <td>Custom</td>
+    <td>4.14.165-102.205.amzn2.x86_64</td>
   </tr>
 </table>
+
 <br>
-<table border=1>
+
+<table border="1">
   <tr>
-    <th colspan="2">Settings | Limits</th>
+    <th colspan="3">Settings | Limits</th>
   </tr>
   <tr>
-    <td><b>Writable Path & Space</b></td>
+    <th>Description</th>
+    <th>Settings | Limits | Explained</th>
+    <th>Can be increased</th>
+  </tr>
+  <tr>
+    <td>
+      <b>Writable Path & Space</b>
+    </td>
     <td>/tmp/ 512 MB</td>
+    <td>--</td>
   </tr>
   <tr>
     <td><b>Default Memory & Execution Time</b></td>
     <td>128 MB Memory<br>3 Second Timeout</td>
+    <td>--</td>
   </tr>
   <tr>
     <td><b>Max Memory & Execution Time</b></td>
-    <td>3008 MB Memory<br>5 Minutes Timeout</td>
+    <td>3008 MB Memory (64 MB increments)<br>15 Minutes Timeout</td>
+    <td>--</td>
   </tr>
   <tr>
     <td><b>Number of processes and threads (Total)</b></td>
     <td>1024</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Number of File descriptors (Total)</b></td>
+    <td>1024</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Maximum deployment package size</b></td>
+    <td>
+      <br>50 MB (zipped, direct upload)
+      <br>250 MB (unzipped, including layers)
+    </td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Maximum deployment package size for console editor</b></td>
+    <td>3 MB</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Total size of deployment package per region</b></td>
+    <td>75 GB</td>
+    <td>Can be increased upto Terabytes</td>
+  </tr>
+  <tr>
+    <td><b>Maximum size of environment variables set</b></td>
+    <td>4 KB</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Maximum function Layers</b></td>
+    <td>5 layers</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Environment variables size</b></td>
+    <td>4 KB</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Maximum test events (Console editor)</b></td>
+    <td>10</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Invocation payload Limit (request and response)</b></td>
+    <td>6 MB (synchronous)<br>256 KB (asynchronous)</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Elastic network interpaces per VPC</b></td>
+    <td>250</td>
+    <td>Can be increased upto Hundreds</td>
+  </tr>
+  <tr>
+    <td><b>Lambda Destinations</b></td>
+    <td>
+      <ul>
+        <li>It sends invocation records to a destination (SQS queue, SNS topic, Lambda function, or EventBridge event bus) when the lambda function is invoked asynchronously</li>
+        <li>It also supports stream invocation</li>
+      </ul>
+    </td>
+    <td>Can be increased upto Hundreds</td>
+  </tr>
+  <tr>
+    <td><b>Monitoring tools</b></td>
+    <td>
+      <ul>
+        <li>(Default) CloudWatch Logs stream</li>
+        <li>AWS X-Ray</li>
+        <li>CloudWatch Lambda Insights (preview)</li>
+      </ul>
+    </td>
+    <td>--</td>
   </tr>
   <tr>
     <td><b>VPC</b></td>
-    <td>When you enable VPC, your Lambda function will lose default internet access. If you require external internet access for your function, ensure that your security group allows outbound connections and that your VPC has a NAT gateway</td>
+    <td>
+      <ul>
+        <li>When you enable VPC, your Lambda function will lose default internet access</li>
+        <li>If you require external internet access for your function, ensure that your security group allows outbound connections and that your VPC has a NAT gateway</li>
+      </ul>
+    </td>
+    <td>--</td>
   </tr>
   <tr>
     <td><b>Concurrency</b></td>
-    <td>Concurrent Execution refers to the execution of number of function at a given time. <br>By default the limit is 1000  across all function within a given region. AWS Lambda keeps 100 for the unreserved function. <br>So, if there are 1000 then you can select from 900 and reserve concurrency for selected function and rest 100 is used for the unreserved function.</td>
+    <td>
+      <ul>
+        <li>Concurrent Execution refers to the execution of number of function at a given time. By default the limit is 1000  across all function within a given region</li>
+        <li>AWS Lambda keeps 100 for the unreserved function</li>
+        <li>So, if there are 1000 then you can select from 900 and reserve concurrency for selected function and rest 100 is used for the unreserved function</li>
+      </ul>
+    <td>Can be increased upto Hundreds of thousands</td>
   </tr>
   <tr>
     <td><b>DLQ (Dead Letter Queue)</td>
-    <td>Failed Lambda is invoked twice by default and the event is discarded. DLQ instruct lamnda to send unprocessed events to AWS SQS or AWS SNS. DLQ helps you troubleshoot and examine the unprocessed request.</td>
+    <td>
+      <ul>
+        <li>Failed Lambda is invoked twice by default and the event is discarded</li>
+        <li>DLQ instruct lamnda to send unprocessed events to AWS SQS or AWS SNS</li>
+        <li>DLQ helps you troubleshoot and examine the unprocessed request</li>
+      </ul>
+    <td>--</td>
   </tr>
   <tr>
     <td><b>Throttle</b></td>
-    <td>Throttle will set reserved concurrency of the function to zero and it will throttle all future invocation. If the function is throttled then it will fail to run. (If the fucntion is ran from Lambda console then it will throw "Calling the Invoke API failed with message: Rate Exceeded.")</td>
+    <td>
+      <ul>
+        <li>Throttle will set reserved concurrency of the function to zero and it will throttle all future invocation</li>
+        <li>If the function is throttled then it will fail to run</li>
+        <li>If the fucntion is ran from Lambda console then it will throw "Calling the Invoke API failed with message: Rate Exceeded."</li>
+      </ul>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>File system</b></td>
+    <td>
+      <ul>
+        <li><a href="https://www.youtube.com/playlist?list=PL5KTLzN85O4L0rYTtGVKxPr4yQ5oHMYOn">File system</a> will allow you to add Amazon EFS file system, which provides distributed network storage for the instances of the function</li>
+        <li>To connect to the file system, you need to connect your lambda function to VPC</li>
+      </ul>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>State machines</b></td>
+    <td>
+      <ul>
+        <li>Step Functions state machines which orchestrate this function</li>
+        <li>The Step Functions state machines page lists all state machines in the current AWS region with at least one workflow step that invokes a Lambda function</li>
+      </ul>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b>Database proxies</b></td>
+    <td>
+      <ul>
+        <li>Database proxy manages a pool of database connections and relays queries from a function</li>
+        <li>It uses Secrets Manager secret to access credentials for a database</li>
+        <li>To connect to the file system, you need to connect your lambda function to VPC</li>
+      </ul>
+    <td>--</td>
+  </tr>
+</table>
+<br>
+<table border="1">
+  <tr>
+    <th colspan="2">Execution | Invoke | Tweaks</th>
+  </tr>
+  <tr>
+    <td>A Lambda can invoke another Lambda</td>
+    <td><a href="https://youtu.be/5QwrseYLwNM">Yes</a></td>
+  </tr>
+  <tr>
+    <td>A Lambda in one region can invoke another lambda in other region</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>A Lambda can invoke same Lambda</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Exceed 15 minutes execution time</td>
+    <td>Yes (Can Tweak around)</td>
+  </tr>
+  <tr>
+    <td>How to exceed 5 minutes execution time</td>
+    <td> <a href="http://www.thetechnologyupdates.com/aws-lambda-going-beyond-5-minutes-execution/">Self-Invoke</a> , SNS, SQS</td>
+  </tr>
+  <tr>
+    <td>Asynchronous Execution</td>
+    <td>Yes <a href="http://www.thetechnologyupdates.com/aws-lambda-execute-lambda-asynchronously-parallel/">(Async Exec)</a></td>
+  </tr>
+  <tr>
+    <td>Invoke same Lamba with different version</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Setting Lambda Invoke Max Retry attempt to 0</td>
+    <td><a href="https://youtu.be/ySVz-9EOKbw">Yes</a></td>
   </tr>
 </table>
 <br>
