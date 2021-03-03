@@ -163,7 +163,7 @@
   </tr>
   <tr>
     <td><b>Max Memory & Execution Time</b></td>
-    <td>3008 MB Memory (64 MB increments)<br>15 Minutes Timeout</td>
+    <td>10,240 MB (1 MB increments)<br>900 seconds (15 Minutes) Timeout</td>
     <td>--</td>
   </tr>
   <tr>
@@ -181,6 +181,13 @@
     <td>
       <br>50 MB (zipped, direct upload)
       <br>250 MB (unzipped, including layers)
+    </td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td><b><a href="https://youtu.be/23fE57EFRK4">Container image</a> code package size</b></td>
+    <td>
+      <br>10 GB
     </td>
     <td>--</td>
   </tr>
